@@ -96,7 +96,7 @@ func (s *AlertTrigger) ReadIndexFromFile() int {
 // Doing rule here
 func (s *AlertTrigger) ShouldAlertSend() bool {
 	if s.ThresholdLevels[0] == 0 {
-		return true
+		return false
 	}
 	if s.CurrentLoss < s.ThresholdLevels[0] {
 		s.ThresholdIndex = 0
